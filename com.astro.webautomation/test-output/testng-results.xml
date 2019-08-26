@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="49805" started-at="2019-08-26T17:20:19Z" finished-at="2019-08-26T17:21:09Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="49805" started-at="2019-08-26T17:20:19Z" finished-at="2019-08-26T17:21:09Z">
+      <class name="com.astro.webautomation.com.astro.webautomation.ecommerceTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.astro.webautomation.com.astro.webautomation.ecommerceTest@42e26948]" name="setup" is-config="true" duration-ms="2369" started-at="2019-08-27T01:20:19Z" finished-at="2019-08-27T01:20:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="launchbrowser()[pri:0, instance:com.astro.webautomation.com.astro.webautomation.ecommerceTest@42e26948]" name="launchbrowser" duration-ms="47120" started-at="2019-08-27T01:20:22Z" finished-at="2019-08-27T01:21:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchbrowser -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.astro.webautomation.com.astro.webautomation.ecommerceTest@42e26948]" name="tearDown" is-config="true" duration-ms="305" started-at="2019-08-27T01:21:09Z" finished-at="2019-08-27T01:21:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.astro.webautomation.com.astro.webautomation.ecommerceTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
