@@ -14,6 +14,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -34,7 +35,7 @@ public class ecommerceTest extends DriverConfig{
 
 
 	@Test
-	public void launchbrowser() throws InterruptedException, IOException, AWTException{
+	public void ecommerceproductcomparison() throws InterruptedException, IOException, AWTException{
 
 		// Date Format
 		DateFormat df = new SimpleDateFormat("ddMMyyHHmm");
@@ -155,12 +156,16 @@ public class ecommerceTest extends DriverConfig{
 			productdecendinglist_selection_pagetwo.click();
 			Thread.sleep(2000);
 
+			// 5 - Get Total Number
+			WebElement searchresultpagetwo = driver.findElement(By.xpath("/html/body/div[1]/div[1]/span/h1/div/div[1]/div/div/span[1]"));
+			String totalproductspagetwo = searchresultpagetwo.getText();
+			System.out.println(totalproductspagetwo);
+			logthis.info(totalproductspagetwo); 
+			Thread.sleep(2000);
 
-
-			// 5- Get Product Listing
+			// 6- Get Product Listing
 			WebElement productlist_pagetwo = driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[2]/div/span[3]/div[1]"));	
 			String productlistdetails_pagetwo = productlist_pagetwo.getText();
-			//			System.out.println(productlistdetails_pagetwo);
 			String restructuredproductlisting_pagetwo = productlistdetails_pagetwo.replaceAll("(Eligible for Shipping to Malaysia|More Buying Choices)", "");
 			System.out.println(restructuredproductlisting_pagetwo);
 			logthis.info(driver.getCurrentUrl());
@@ -169,43 +174,14 @@ public class ecommerceTest extends DriverConfig{
 
 			printWriter.println(ecommercepagenamesecond);
 			printWriter.println(driver.getCurrentUrl() + newlinw);
-			//			printWriter.println(totalproducts + newlinw);
 			printWriter.println(restructuredproductlisting_pagetwo);
 			printWriter.close();
-
-
-
-
-
-
-
-
-
-
-			//			try (OutputStream output = new FileOutputStream(productproperties + "lazadaproducts.properties")) {
-			//
-			//	            Properties prop = new Properties();
-			//
-			//	            // set the properties value
-			//	            prop.setProperty("Product Listing", productlistdetails);
-			//
-			//	            // save properties to project root folder
-			//	            prop.store(output, null);
-			//
-			//	            System.out.println(prop);
-			//
-			//	        } catch (IOException io) {
-			//	            io.printStackTrace();
-			//	        }
-
-
-
-
 
 
 		} catch (SecurityException e) {  
 			e.printStackTrace(); 
 		}
+		email.main(null);
 	}
 
 }
